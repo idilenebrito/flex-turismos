@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div img{
+    min-width: 250px;
+    display: block;
+    width: 100%;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+.flex-container{
+    display: flex;
+    max-width: 992px;
+    margin: auto;
+    width: 100%;
+    min-width: 320px;   
+}
+
+
+header{
+    background-color: #122a57;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+header .list-items{
+    display: flex;
+    max-width: 260px;
+    width: 100%;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.list-items li a{
+    color: #fff;
+    
+}
+
+header .menu{
+    justify-content: space-between;
+}
+
+.apresentacao{
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao .texto-apresentacao{
+    min-width: 200px;
+}
+
+.texto-apresentacao h1{
+    color: #122a57;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+
+
+#quem-somos{
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#quem-somos h2{
+    font-size: 32px;
+    display: flex;
+    color: #122a57;
+    margin-bottom: 20px;
+}
+
+#quem-somos h2::before{
+    content: " ";
+    height: 40px;
+    width: 4px;
+    background-color: #122a57;
+    position: relative;
+    margin-right: 5px;
+}
+
+#quem-somos p {
+    margin-bottom: 10px;
+    width: 90%;
+}
+
+#quem-somos img{
+    width: 100%;
+    margin: auto;
+}
+
+.container-externo{
+    background-color: #122a57;
+    width: 100%;
+    color: #fff;
+}
+
+#servicos{
+    flex-direction: column;
+}
+
+
+.list-servicos{
+    display: flex;
+    justify-content: space-between;
+}
+
+#servicos h2{
+    margin: 50px 0 30px 0;
+
+    font-size: 32px;
+}
+
+.button-white {
+    text-decoration: none;
+    color: #122a57;
+    border-radius: 30px;
+    background-color: #fff;
+    width: 180px;
+    display: block;
+    height: 50px; /* altura do texto no botao*/
+    margin: 30px auto 50px auto;
+    line-height: 50px;
+    font-weight: 700;  
+    text-align: center; 
+}
+
+.button-blue {
+    text-decoration: none;
+    color:#fff;
+    border-radius: 30px;
+    background-color: #122a57;
+    width: 180px;
+    display: block;
+    height: 50px;
+    margin: 20px;
+    line-height: 50px;
+    font-weight: 700;  
+    text-align: center; 
+}
+
+.item-servico img{
+    width: 50%;
+    margin: auto;
+}
+
+.list-servicos .item-servico{
+    text-align: center;
+}
+
+.item-servico p {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+#planos{
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.list-planos{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#planos h2{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #122a57;
+}
+
+.item-plano{
+    flex: 1;
+    border: 5px solid #122a57;
+    margin-right: 20px;
+    max-width: 240px;
+}
+
+.item-plano h3{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.item-plano .button-blue{
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.item-plano h3::after{
+    content: "";
+    background-color: #122a57;
+    height: 4px;
+    width: 150px;
+    position: relative;
+    margin-right: 5px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.item-plano ul{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.item-plano ul li{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.item-plano li::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #122a57;
+    margin-right: 5px;
+}
+
+footer{
+    background-color: #122a57;
+    justify-content: space-between;
+    font-size: 14px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer{
+    justify-content: space-between;
+    color: #fff;
+    
+}
+
+/*mobile*/
+@media (max-width: 992px){
+
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresentacao{
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao .texto-apresentacao{
+        width: 50%;
+        min-height: 100px;
+    }
+
+    #quem-somos{
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+    }
+
+    .menu h1{
+        margin: 0 0 15px 10px;
+    }
+
+    .list-servicos{
+        flex-direction: column-reverse;
+    }
+
+    .item-servico img {
+        width: 20px;
+        margin: 20px auto 30px auto;
+    }
+
+    .list-planos{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    
+    .list-planos .item-plano{
+        max-width: 80%;
+        width: 100%;
+        margin-bottom: 20px;
+        align-self: center;
+    }
+    #planos h2{
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .item-servico .button-white{
+        align-self: center;
+        max-height: 200px;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+}
