@@ -274,6 +274,7 @@ footer .footer{
     #quem-somos{
         flex-direction: column-reverse;
         margin-bottom: 20px;
+        margin-left: 20px;
     }
 
     .menu h1{
